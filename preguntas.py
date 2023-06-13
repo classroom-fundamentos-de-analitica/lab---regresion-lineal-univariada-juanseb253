@@ -73,7 +73,7 @@ def pregunta_03():
     """
 
     # Lea el archivo `gm_2008_region.csv` y asignelo al DataFrame `df`
-    df = pd.read_csv('gm_2008_region.csv')
+    df = pd.read_csv('gm_2008_region.csv', sep=',')
 
     # Asigne a la variable los valores de la columna `fertility`
     X_fertility = df['fertility']
