@@ -76,7 +76,7 @@ def pregunta_03():
     df = pd.read_csv('gm_2008_region.csv', sep=',')
 
     # Asigne a la variable los valores de la columna `fertility`
-    X_fertility = df['fertility']
+    X_fertility = df['fertility'].values
 
     # Asigne a la variable los valores de la columna `life`
     y_life = df['life']
@@ -101,7 +101,7 @@ def pregunta_03():
     y_pred = reg.predict(prediction_space)
 
     # Imprima el R^2 del modelo con 4 decimales
-    print(reg.score((X_fertility.reshape(-1, 1), y_life.values.reshape(-1, 1)).round(round(4))))
+    print(reg.score(X_fertility.reshape(-1, 1), y_life.values.reshape(-1, 1)).round(4))
 
 
 def pregunta_04():
